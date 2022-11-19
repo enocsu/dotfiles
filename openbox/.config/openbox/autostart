@@ -1,0 +1,30 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# set bgcolor
+hsetroot -solid "#000000"
+(sleep 1; ~/.fehbg) &
+
+# compositor
+picom &
+
+# power management
+xfce4-power-manager &
+
+# notifications
+dunst &
+
+# panel
+tint2 &
+
+# clipboard
+greenclip daemon &
+
+# volume control
+(sleep 15; volumeicon) &
+
+# network manager
+nm-applet &
